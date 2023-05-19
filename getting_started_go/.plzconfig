@@ -6,9 +6,13 @@
 ; Or you can uncomment the following to pin everyone to a particular version;
 ; when you change it all users will automatically get updated.
 ; [please]
-; version = 15.8.1
+; version = 17.0.0-beta.9
 
-[go]
-;gotool = ...
-;goroot - ... 
-importpath = example_module
+[parse]
+preloadsubincludes = ///go//build_defs:go
+
+[Plugin "go"]
+Target = //plugins:go
+ImportPath = github.com/example/module
+GoTool = //third_party/go:toolchain|go
+

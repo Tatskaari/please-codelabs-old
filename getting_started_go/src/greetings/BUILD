@@ -7,9 +7,13 @@ go_library(
 go_test(
     name = "greetings_test",
     srcs = ["greetings_test.go"],
+    # Here we have used the shorthand `:greetings` label format. This format can be used to refer to a rule in the same
+    # package and is shorthand for `//src/greetings:greetings`.
     deps = [
         ":greetings",
-        "//third_party/go:assert",
+        # Could use a subrepo label i.e. ///third_party/go/github.com_stretchr_testify//assert instead if we want
+        "//third_party/go:testify",
     ],
     external = True,
 )
+
