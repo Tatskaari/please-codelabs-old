@@ -1,11 +1,11 @@
 package main
 
 import (
-	"fmt"
+    "fmt"
 
-	"example_module/src/greetings"
+    "github.com/example/module/src/greetings"
 )
 
 func main(){
-	fmt.Printf("%s, world!\n", greetings.Greeting())
+    fmt.Printf("%s, world!\n", greetings.Greeting())
 }

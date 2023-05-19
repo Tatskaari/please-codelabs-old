@@ -1,15 +1,16 @@
 package greetings
 
 import (
-	"math/rand"
+    "math/rand"
 )
 
 var greetings = []string{
-	"Hello",
-	"Bonjour",
-	"Marhabaan",
+    "Hello",
+    "Bonjour",
+    "Marhabaan",
 }
 
 func Greeting() string {
-	return greetings[rand.Intn(len(greetings))]
+  return greetings[rand.Intn(len(greetings))]
 }
+
